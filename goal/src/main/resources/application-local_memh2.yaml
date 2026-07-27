@@ -1,23 +1,25 @@
 spring:
   application:
     name: goal
+# memory h2 db
   datasource:
     driver-class-name: org.h2.Driver
     url: jdbc:h2:mem:localmemdb;MODE=MySQL;
     username: sa
     password:
-
-    p6spy:
-      enable-logging: true
+  h2:
+    console:
+      enabled: true
+      path: /h2-console
   jpa:
     hibernate:
       ddl-auto: create
     properties:
       default_batch_fetch_size: 1000
-  h2:
-    console:
-      enabled: true
-      path: /h2-console
+    p6spy:
+      enable-logging: true
 logging:
   level:
     root: info
+spring doc:
+  use-fqn: true

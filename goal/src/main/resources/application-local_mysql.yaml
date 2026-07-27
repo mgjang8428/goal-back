@@ -1,0 +1,19 @@
+spring:
+  application:
+    name: goal
+  # local mysql db
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/goal
+    username: root
+    password: goaltestmysql
+  jpa:
+    hibernate:
+      ddl-auto: validate
+    properties:
+      default_batch_fetch_size: 1000
+p6spy:
+  enable-logging: true
+logging:
+  level:
+    root: info
