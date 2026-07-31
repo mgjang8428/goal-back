@@ -56,6 +56,9 @@ dependencies {
 
 // test
 	testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
+
+// jbcrypt
+	implementation 'org.mindrot:jbcrypt:0.4'
 }
 
 tasks.named('test') {
